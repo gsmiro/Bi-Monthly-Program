@@ -1,0 +1,23 @@
+﻿@page "/viewmit"
+@using mitlist.Data
+
+<PageTitle>Meeting</PageTitle>
+
+<h1>Meeting</h1>
+
+@if (meeting == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+   <p>Found meeting</p>
+}
+
+@code {
+    private Meeting meeting;
+    protected override async Task OnInitializedAsync()
+    {
+        meeting = null;
+    }    
+}
